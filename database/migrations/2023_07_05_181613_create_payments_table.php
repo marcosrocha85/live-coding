@@ -13,8 +13,8 @@ return new class extends Migration
     {
         Schema::create('payments', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBitInteger('installment_id');
-            $table->unsignedBitInteger('installment_installment_id');
+            $table->unsignedBigInteger('installment_id');
+            $table->unsignedBigInteger('installment_installment_id');
             $table->dateTime('emission_date');
             $table->decimal('amount', $precision = 15, $scale = 4);
             $table->decimal('fine', $precision = 15, $scale = 4);

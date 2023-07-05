@@ -13,12 +13,12 @@ return new class extends Migration
     {
         Schema::create('installments', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBitInteger('installment');
+            $table->unsignedBigInteger('installment');
             $table->enum('installment_type', ['RECEIVE', 'PAY'])->default('RECEIVE');
-            $table->unsignedBitInteger('person_id');
+            $table->unsignedBigInteger('person_id');
             $table->dateTime('emission_date');
             $table->dateTime('due_date');
-            $table->unsignedBitInteger('account_plan_id');
+            $table->unsignedBigInteger('account_plan_id');
             $table->decimal('amount', $precision = 15, $scale = 4);
             $table->dateTime('payment_date');
             $table->timestamps();
