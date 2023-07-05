@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('account_plans', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->enum('account_type', ['RECEIVE', 'PAY']);
+            $table->enum('account_type', ['RECEIVE', 'PAY'])->default('RECEIVE');
             $table->timestamps();
             $table->softDeletes();
         });
