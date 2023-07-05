@@ -22,6 +22,7 @@ return new class extends Migration
             $table->decimal('amount', $precision = 15, $scale = 4);
             $table->dateTime('payment_date');
             $table->timestamps();
+            $table->primary(['id', 'installment']);
         });
     }
 
